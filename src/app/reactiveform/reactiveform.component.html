@@ -1,0 +1,13 @@
+<form [formGroup]="login">
+    username:
+    <input type="text" class="form-control w-50 m-2" formControlName="uname">
+    <div *ngIf="login.get('uname').touched&&login.get('uname').hasError('required')">name required</div>
+    <div *ngIf="login.get('uname').touched&&login.get('uname').hasError('minlength')">minimum 8 charecters required</div>
+    
+    password:
+    <input  type="password" class="form-control  m-2" formControlName="pwd">
+    <span *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('required')">password required</span>
+    <span *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('minlength')">minimum 8 charecters required</span>
+    
+    <button (click)="show()" class="btn btn-primary">click</button>
+</form>

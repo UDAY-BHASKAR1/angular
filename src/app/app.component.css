@@ -1,0 +1,11 @@
+img{
+  padding: 20px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.bigImage{
+  width: 30%;
+  height: 30%;
+}

@@ -1,0 +1,46 @@
+
+<section>
+    <div>
+        <div>
+            <table class="table">
+                <thead class="table-head">
+                    <tr class="table-heading">
+                        <th>Sno</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <tr  *ngFor=" let products of product">
+                     <td >{{products.sno}}</td>
+                     <td><img class="pics" [src]="products.image" alt=""></td>
+                     <td>{{products.name}}</td>
+                     <td>{{products.price |currency:'INR'}}</td>
+                     <td><button (click)="decrqty(products.sno)">-</button>{{products.qty}} <button (click)="incrqty(products.sno)">+</button> </td>
+                     <td>{{products.price*products.qty |currency:'INR'}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Grand Total</td>
+                        <td>{{totalcal() |currency:'INR'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<section>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    
+    <button type="button" class="btn btn-link">Link</button>
+</section>

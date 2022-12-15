@@ -1,0 +1,25 @@
+<!-- <app-shopping-cart></app-shopping-cart>
+<app-user-register></app-user-register> -->
+<!-- <app-header ></app-header> -->
+<app-reactiveform></app-reactiveform>
+<!-- <app-array-reactform></app-array-reactform> -->
+<!-- <app-crud-operators></app-crud-operators> -->
+<app-stackblizz></app-stackblizz>
+
+
+<button id="btn"  
+  (click)="getData()" class="btn btn-primary btn-lg">click me</button>
+
+
+<div *ngIf="data">
+
+   
+   <img  *ngFor="let product of data.photos" (click)="showsImageBig(product)" class="button" [src]=product.urls.small  alt="uday">
+  <p  *ngFor="let product of data.name">{{product}}</p>
+</div>
+<!-- <button  (click)="selectLeftArrow()">-</button> -->
+<div>
+   <img class="bigImage" [src]="clickedimage?.urls?.small" alt="">
+</div>
+<button *ngIf="" (click)="selectArrow()">+</button>
+<button class="btn bg-primary">wert</button>

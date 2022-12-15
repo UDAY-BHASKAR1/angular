@@ -1,0 +1,68 @@
+<p>stackblizz works!</p>
+<style>
+    .validation-error{
+      color:red;
+    }
+  </style>
+  <form [formGroup]="registrationFormGroup" (ngSubmit)="onSubmit()">
+    <!-- <input type="text" formControlName="name" placeholder="name" /><br />
+    <span
+      class="validation-error"
+      *ngIf="
+        (formSubmitted || registrationFormGroup.controls.name.touched) &&
+        registrationFormGroup.controls.name.errors?.required
+      "
+      >Name is required</span
+    >
+    <span
+      class="validation-error"
+      *ngIf="
+        ((formSubmitted || registrationFormGroup.controls.name.touched) &&
+          registrationFormGroup.controls.name.errors?.minlength) ||
+        registrationFormGroup.controls.name.errors?.maxlenth
+      "
+      >Name should be between 5 to 50 characters</span
+    ><br /> -->
+    <input type="text" formControlName="email" placeholder="email" /><br />
+    <span
+      class="validation-error"
+      *ngIf="
+        (formSubmitted || registrationFormGroup.controls.email.touched) &&
+        registrationFormGroup.controls.email.errors?.required
+      "
+      >Email is required</span
+    >
+    <span
+      class="validation-error"
+      *ngIf="
+        (formSubmitted || registrationFormGroup.controls.email.touched) &&
+        registrationFormGroup.controls.email.errors?.email
+      "
+      >Please enter correct email id</span
+    ><br />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="password"
+    /><br />
+    <span
+      class="validation-error"
+      *ngIf="
+        (formSubmitted || registrationFormGroup.controls.password.touched) &&
+        registrationFormGroup.controls.password.errors?.required
+      "
+      >Password is required</span
+    >
+    <span
+      class="validation-error"
+      *ngIf="
+        (formSubmitted || registrationFormGroup.controls.password.touched) &&
+        registrationFormGroup.controls.password.errors?.pattern
+      "
+      >Please enter strong password(Should have Uppercase, lowercase, numbers &
+      special characters</span
+    ><br />
+  
+    <button type="submit">Submit</button>
+  </form>
+  

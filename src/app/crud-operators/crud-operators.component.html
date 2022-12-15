@@ -1,0 +1,39 @@
+ <button id="btn" [hidden]="!inboundClick" 
+ (click)="inboundClick = !inboundClick"
+ (click)="getData()" class="btn btn-primary btn-lg">click me</button>
+
+
+<div *ngIf="data" class="container">
+    <div class="headers d-flex justify-content-between justify-content-center p-4 bg-primary">
+        <h2 class="table-title">Manage Users</h2>
+        <button class="btn btn-success btn-sm">Add User</button>
+    </div>
+    <div >
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr >
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Email</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr  *ngFor="let product of data ;index as i">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.username}}</td>
+            <td>{{product.email}}</td>
+            <td><button class="btn btn-primary btn-sm">Edit</button></td>
+            <td><button (click)="remove(i)" class="btn btn-danger btn-sm">Delete</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      </div>
+</div>
+ 
+
+
