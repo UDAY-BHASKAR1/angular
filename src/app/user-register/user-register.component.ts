@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 interface user{
   name:string;
-  email:string;
+  mail:string;
   password:string;
   designation:string;
   bio:string;
@@ -20,7 +20,7 @@ export class UserRegisterComponent implements OnInit {
 
   public User:user={
     name:'',
-    email:'',
+    mail:'',
     password:'',
     designation:'',
     bio:'',

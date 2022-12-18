@@ -6,22 +6,23 @@ import { AppComponent } from './app.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ArrayReactformComponent } from './array-reactform/array-reactform.component';
-import { CrudOperatorsComponent } from './crud-operators/crud-operators.component';
-import { StackblizzComponent } from './stackblizz/stackblizz.component';
+
+import {FormValidationsComponent} from './form-validations/form-validations.component';
+import { GalleryComponent } from './gallery/gallery.component'
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingCartComponent,
     UserRegisterComponent,
-    HeaderComponent,
+   
     ReactiveformComponent,
     ArrayReactformComponent,
-    CrudOperatorsComponent,
-    StackblizzComponent,
+    FormValidationsComponent,
+    GalleryComponent,
+    
     
   ],
   imports: [

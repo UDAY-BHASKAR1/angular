@@ -22,35 +22,35 @@ export class ShoppingCartComponent implements OnInit {
       name: "Titan",
       image: 'https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: 8000,
-      qty: 2
+      qty: 1
     },
     {
       sno: "AA102",
       name: "Fossil",
       image: 'https://images.pexels.com/photos/9423289/pexels-photo-9423289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       price: 9000,
-      qty: 2
+      qty: 1
     },
     {
       sno: "AA103",
       name: "Diesel",
       image: 'https://images.pexels.com/photos/9423289/pexels-photo-9423289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=3',
       price: 9000,
-      qty: 2
+      qty: 1
     },
     {
       sno: "AA104",
       name: "Rolex",
       image: 'https://images.pexels.com/photos/9878606/pexels-photo-9878606.jpeg?auto=compress&cs=tinysrgb&w=1600',
       price: 9000,
-      qty: 2
+      qty: 1
     },
     {
       sno: "AA105",
       name: "Hublot",
       image: 'https://images.pexels.com/photos/9423289/pexels-photo-9423289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       price: 9000,
-      qty: 2
+      qty: 1
     }
   ];
   
@@ -60,7 +60,7 @@ export class ShoppingCartComponent implements OnInit {
   }
  
  
-  public incrqty(productId:string): void{
+   incrqty(productId:string): void{
     this.product = this.product.map((product: products) => {
       if (product.sno === productId) {
         return {
@@ -71,7 +71,7 @@ export class ShoppingCartComponent implements OnInit {
       return product
     })
   }
-  public decrqty(productId:string): void{
+   decrqty(productId:string): void{
     this.product = this.product.map((product: products) => {
       if (product.sno === productId) {
         return {
@@ -82,7 +82,7 @@ export class ShoppingCartComponent implements OnInit {
       return product
     })
   }
-  public totalcal() {
+   totalcal() {
     let total: number = 0;
     for (let products of this.product) {
       total += (products.qty*products.price)

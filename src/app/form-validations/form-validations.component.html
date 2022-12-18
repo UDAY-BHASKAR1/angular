@@ -1,28 +1,20 @@
-<p>stackblizz works!</p>
+
 <style>
     .validation-error{
       color:red;
     }
+   
   </style>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+   <div class="card-header bg-success">
+    <p class="h4">Register</p>
+</div>
+<div class="valid d-flex justify-content-center mt-5">
   <form [formGroup]="registrationFormGroup" (ngSubmit)="onSubmit()">
-    <!-- <input type="text" formControlName="name" placeholder="name" /><br />
-    <span
-      class="validation-error"
-      *ngIf="
-        (formSubmitted || registrationFormGroup.controls.name.touched) &&
-        registrationFormGroup.controls.name.errors?.required
-      "
-      >Name is required</span
-    >
-    <span
-      class="validation-error"
-      *ngIf="
-        ((formSubmitted || registrationFormGroup.controls.name.touched) &&
-          registrationFormGroup.controls.name.errors?.minlength) ||
-        registrationFormGroup.controls.name.errors?.maxlenth
-      "
-      >Name should be between 5 to 50 characters</span
-    ><br /> -->
+   
     <input type="text" formControlName="email" placeholder="email" /><br />
     <span
       class="validation-error"
@@ -44,6 +36,7 @@
       type="password"
       formControlName="password"
       placeholder="password"
+      class="w-100"
     /><br />
     <span
       class="validation-error"
@@ -63,6 +56,11 @@
       special characters</span
     ><br />
   
-    <button type="submit">Submit</button>
+    <button type="submit" class=" btn btn-danger">Submit</button>
   </form>
+</div>
+</div>
+</div>
+</div>
+</div>
   
