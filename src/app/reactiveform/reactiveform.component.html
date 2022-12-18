@@ -5,9 +5,9 @@
     <div *ngIf="login.get('uname').touched&&login.get('uname').hasError('minlength')">minimum 8 charecters required</div>
     
     password:
-    <input  type="password" class="form-control  m-2" formControlName="pwd">
-    <span *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('required')">password required</span>
-    <span *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('minlength')">minimum 8 charecters required</span>
+    <input  type="password" class="form-control w-50 m-2" formControlName="pwd">
+    <div *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('required')">password required</div>
+    <div *ngIf="login.get('pwd').touched&&login.get('pwd').hasError('minlength')">minimum 8 charecters required</div>
     
     <button (click)="show()" class="btn btn-primary">click</button>
 </form>

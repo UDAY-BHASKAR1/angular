@@ -1,0 +1,16 @@
+
+
+
+<button id="btn"  [hidden]="!inboundClick" 
+(click)="inboundClick = !inboundClick"  (click)="getData()" class="btn btn-success btn-lg">click me</button>
+
+<div class="text-center">
+  <img class="bigImage" [src]="clickedimage?.urls?.small" alt="">
+</div>
+
+<div *ngIf="data">
+  <img  *ngFor="let product of data.photos" (click)="showsImageBig(product)" class="button" [src]=product.urls.small  alt="uday">
+  <p  *ngFor="let product of data.name">{{product}}</p>
+</div>
+ 
+ 

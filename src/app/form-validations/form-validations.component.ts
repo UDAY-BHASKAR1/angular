@@ -1,11 +1,11 @@
 import { Component, OnInit,VERSION } from '@angular/core';
 import { FormControl,FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-stackblizz',
-  templateUrl: './stackblizz.component.html',
-  styleUrls: ['./stackblizz.component.css']
+  selector: 'app-form-validations',
+  templateUrl: './form-validations.component.html',
+  styleUrls: ['./form-validations.component.css']
 })
-export class StackblizzComponent implements OnInit {
+export class FormValidationsComponent implements OnInit {
 
 
 

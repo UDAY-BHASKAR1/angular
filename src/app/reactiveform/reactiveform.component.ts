@@ -15,7 +15,8 @@ export class ReactiveformComponent implements OnInit {
   
   login= new FormGroup({
     uname:new FormControl("",[Validators.required,Validators.minLength(8)]),
-     pwd:new FormControl("",[Validators.required,Validators.minLength(8)])
+     pwd:new FormControl("",[Validators.required,Validators.minLength(8)
+    ])
   })
  
   show(){

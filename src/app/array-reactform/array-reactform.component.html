@@ -1,4 +1,6 @@
-<form action="" [formGroup]="testForm">
+
+
+    <form class="text-center" action="" [formGroup]="testForm">
     <div formArrayName="mobiles">
         <div *ngFor="let m of testForm.controls['mobiles']['controls'];  index as i" class="d-flex">
         <!-- <div>mobileName:</div> -->
@@ -8,6 +10,5 @@
            </div>
         </div>
     </div>
-    
-</form>
+    </form>
 <button class="btn btn-success" type="button" (click)="Add()">Add</button>

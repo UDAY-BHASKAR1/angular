@@ -1,13 +1,44 @@
 <!-- <app-shopping-cart></app-shopping-cart>
-<app-user-register></app-user-register> -->
-<!-- <app-header ></app-header> -->
-<app-reactiveform></app-reactiveform>
-<!-- <app-array-reactform></app-array-reactform> -->
-<!-- <app-crud-operators></app-crud-operators> -->
-<app-stackblizz></app-stackblizz>
+ <app-user-register></app-user-register> 
+
+  <app-reactiveform></app-reactiveform> 
+ <app-array-reactform></app-array-reactform>
+
+ <app-form-validations></app-form-validations>  -->
+ <nav class="navbar navbar-expand-lg navbar-light  bg-primary">
+  
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a  routerLink="/shoppingcart" class="nav-link" href="#">ShoppingCart</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/userregister" class="nav-link" href="#">UserRegister</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/arrayreactform" class="nav-link" href="#">ArrayReactform</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/formvalidations" class="nav-link" href="#">FormValidations</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/reactiveform" class="nav-link" href="#">ReactiveForm</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/gallery" class="nav-link" href="#">Gallery</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
-<button id="btn"  
+ <router-outlet></router-outlet>
+
+
+<!-- <button id="btn"  
   (click)="getData()" class="btn btn-primary btn-lg">click me</button>
 
 
@@ -17,10 +48,8 @@
    <img  *ngFor="let product of data.photos" (click)="showsImageBig(product)" class="button" [src]=product.urls.small  alt="uday">
   <p  *ngFor="let product of data.name">{{product}}</p>
 </div>
-<!-- <button  (click)="selectLeftArrow()">-</button> -->
-<div>
+ <button  (click)="selectLeftArrow()">-</button> -->
+<!-- <div>
    <img class="bigImage" [src]="clickedimage?.urls?.small" alt="">
 </div>
-<button *ngIf="" (click)="selectArrow()">+</button>
-<button class="btn bg-primary">wert</button>
-<button class="btn-lg btn bg-danger">click me</button>
+<button *ngIf="" (click)="selectArrow()">+</button> --> 
