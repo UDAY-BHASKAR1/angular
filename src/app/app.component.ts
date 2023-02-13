@@ -15,6 +15,7 @@ export class AppComponent {
   imageSrc:any='';
   clickedimage:any='';
   imageNameObject:any='';
+  images:any;
   
   
   inputText: string = 'Hi...have a nice day - message from parent';
@@ -50,9 +51,8 @@ showsImageBig(imageNameObject):void{
   }
 
 
-selectArrow(imageNameObject) :void{
-  this.imageNameObject+=1
-  console.log(imageNameObject)
+remove(id) :void{
+  this.clickedimage.splice(id,1);
   
 }
 

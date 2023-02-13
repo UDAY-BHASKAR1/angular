@@ -1,0 +1,118 @@
+.image{
+    width:200px;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  /* .gallery {
+    padding: 50px;
+    max-width: 1200px;
+    margin-top: 10rem;
+    
+    /* background: #F2F2F2; */
+     /* display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-auto-rows: 250px; */
+    /* grid-auto-flow: dense; */
+    
+  /* } 
+  .img{
+    width: 300px;
+  } */
+  
+  
+  /* .app1 {
+    margin-left: 20rem;
+    width: 100%;
+    max-width: 540px;
+  } */
+  /* .selected {
+    width: 300px;
+    height: 300px;
+    /* margin-right: 30rem; */
+    /* border-radius: 30px;
+  }  */
+  @media (max-width: 560px) {
+    .v-stretch {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+  }
+  /* img {
+    cursor: pointer;
+  } */
+  /* .profileimg {
+    border-radius: 50px;
+  }
+  .btn1 {
+    background-color: transparent;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-60%);
+  }
+  .btn2 {
+    background-color: transparent;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-60%);
+  } */
+
+  /* function Image({ data, handleClick }) {
+    return (
+      <div onClick={handleClick}>
+        <div className="photo">
+          <img src={data.urls.small} alt="" className="v-stretch" />
+        </div>
+      </div>
+    );
+  }
+  export default Image; */
+
+
+  body{
+    padding: 10px;
+  }
+  .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-gap: 5px;
+        margin-left: 10rem;
+  }
+
+  .grid-box{
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .deleteIcon{
+    /* z-index: 2; */
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: aqua;
+  }
+
+  .Title{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 600;
+    color:  #8066ff;
+  }
+
+  .edit i{
+       visibility:hidden;
+     }
+     .edit:hover i {
+    visibility:visible;
+   }

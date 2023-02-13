@@ -12,11 +12,12 @@ export class GalleryComponent implements OnInit {
   imageSrc:any='';
   clickedimage:any='';
   imageNameObject:any='';
-  chuck:any='';
+  
   image;any='';
+  data:any;
   
   
-  inboundClick = true;
+  // inboundClick = true;
   outboundClick = true;
   constructor(private http:HttpClient){
 
@@ -24,9 +25,19 @@ export class GalleryComponent implements OnInit {
 
  
 
-data:any;
+
   
-  getData(){
+  // getData(){
+    // this.http.get('https://unsplash.com/napi/landing_pages/wallpapers/desktop/pc?page=1&per_page=100')
+    // .subscribe((data)=>{
+    //   this.data=data
+    //   console.log(data)
+    //   console.log("wert")
+      
+    // })
+  // }
+
+  ngOnInit(): void {
     this.http.get('https://unsplash.com/napi/landing_pages/wallpapers/desktop/pc?page=1&per_page=100')
     .subscribe((data)=>{
       this.data=data
@@ -35,15 +46,12 @@ data:any;
       
     })
   }
-  
-  showsImageBig(imageNameObject):void{
+
+   showsImageBig(imageNameObject):void{
     this.data?.photos?.urls?.small;
      console.log(imageNameObject);
     this.clickedimage=imageNameObject
   }
 
-  
-  ngOnInit(): void {
-  }
 
 }

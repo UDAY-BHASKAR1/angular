@@ -1,0 +1,35 @@
+ <div>
+ <div><p class="Title">Gallery</p></div>
+ <input type="checkbox" [(ngModel)]="masterSelected" name="list_name" value="m1"
+ (change)="checkUncheckAll()" /> <strong>Select/ Unselect All</strong>
+ <div>
+ <button (click)="deleteAll()" >remove</button>
+</div>
+<div>
+    <p-galleria [(value)]="images" [(visible)]="displayCustom" [(activeIndex)]="activeIndex" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '850px'}" [numVisible]="5"
+    [circular]="true" [fullScreen]="true" [showItemNavigators]="true"  [showThumbnails]="true" [baseZIndex]="100000">
+    <ng-template pTemplate="item" let-item>
+        <img class="selected" [src]="item.urls.regular" style="width: 800px; height: 640px; display: block;"/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.urls.regular" style="display: block;width: 100px;"/>
+        </div>
+    </ng-template>
+</p-galleria>
+</div>
+
+<div *ngIf="images" class="gallery">
+    <div  class="edit" *ngFor="let image of images; let index = index;"  key="index">
+      <input type="checkbox" class="checkBox_Icon" [(ngModel)]="image.isSelected" name="list_name" value="{{image.id}}"
+      (change)="isAllSelected()" />
+    {{image.name}}
+        <i class="pi pi-trash deleteIcon" (click)="removeItem(index)"></i>
+        <img class="grid-box checkBox_Icon" [src]="image.urls.small" [alt]="image.alt"  style="cursor: pointer" (click)="imageClick(index)"/>
+    </div>
+</div> 
+</div>
+
+
+
+
